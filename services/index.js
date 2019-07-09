@@ -25,7 +25,6 @@ function decodeToken(token) {
           message: 'El Token ha expirado'
         })
       }
-
       resolve(payload.sub)
     } catch (err) {
       reject({
@@ -38,4 +37,7 @@ function decodeToken(token) {
   return decoded
 }
 
-module.exports = createToken;
+module.exports = {
+  createToken,
+  decodeToken
+};
