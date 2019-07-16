@@ -19,6 +19,12 @@ app.set('view engine', '.hbs')
 
 
 app.use('/api', api);
+app.use('/login', (req, res) => {
+  res.render('login')
+})
+app.get('/', (req, res) => {
+  res.render('product')
+})
 
 
 
